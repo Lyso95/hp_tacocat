@@ -2,7 +2,7 @@
 <html lang="de" class="h-100">
 
 <head>
-    <title>AppName: Ein Coding Projekt von Amos Langensiepen</title>
+    <title>TACOCAT: Ein Coding Projekt von Amos Langensiepen</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -20,7 +20,7 @@
 <!-- Nav Section -->
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <div class="container-fluid">
-        <a class="navbar-brand d-flex align-items-center" href="#"><img src="img/icon.png" height="40" alt="Logo Amos Langensiepen">AppName</a>
+        <a class="navbar-brand d-flex align-items-center" href="#"><img src="img/icon.png" height="40" alt="Logo Amos Langensiepen">TACOCAT</a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
             aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,7 +35,7 @@
                     <a class="nav-link active" aria-current="page" href="app.html" >Die App</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="code.html">Der Code von AppName</a>
+                    <a class="nav-link" href="code.html">Der Code von TACOCAT</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="index.html">Über mich</a>
@@ -46,8 +46,33 @@
 </nav>
 <!--MAIN SECTION -->
 <main class="flex-shrink-0">
-    <div class="container">
-        
+    <div class="container mt-5">
+        <div class="row row-cols-1 row-cols-lg-2">
+            <div class="col">
+                <h1 class="fw-bold mb-3">TACOCAT: Ein Coding Projekt</h1>
+                <p class="fs-4 mb-5">Vor und zurück! Eine Übung mit Arrays in JavaScript:<br>
+                    Schreibe ein Program das den geschriebenen Text rückwärts anzeigt!</p>
+            </div>
+            <div class="col">
+                <h5 class="border-1 border-bottom border-danger">
+                    Schreibe einen Text um ihn umzudrehen!</h5>
+                <form class="row row-cols-1 gx-3 gy-2">
+                    <div class="col">
+                        <input id="userString" type="text" class="form-control" placeholder="Tippe einen Text ein" aria-label="Tippe einen Text ein">
+                    </div>
+                    <div class="col">
+                        <button type="button" id="btnSubmit" class="btn btn-primary">Dreh mich um!</button>
+                    </div>
+                    <div class="alert alert-danger mt-3 invisible fade show" id="alert" role="alert">
+                        <h5 class="alert-heading">Ergebnis:</h5>
+                        <hr>
+                        <p class="mb-0" id="msg">
+                            <!--Insert a message here!-->
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
 </main>
 <!-- Footer Section -->
@@ -76,5 +101,8 @@
         integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
     </script>
     <script src="/js/site.js"></script>
+    <script>
+        document.getElementById("btnSubmit").addEventListener("click",getValue)
+    </script>
 </body>
 </html>
