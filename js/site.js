@@ -17,6 +17,7 @@ function checkPalindrome(userString) {
     for (let index = userString.length - 1; index >= 0; index--) {
         revArray += userString[index];
     }
+    //check the Array and give a true or false back.
     if(revArray.localeCompare(userString)){
         stringEven = true;
         revArray = 'Text ist kein Palindrom!'
@@ -26,7 +27,7 @@ function checkPalindrome(userString) {
     return revArray;
 }
 
-//Display the reversed string to the user
+//Display infotext or palindrome
 //view
 function displayString(revArray){
     //write to the page
