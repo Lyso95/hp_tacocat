@@ -3,35 +3,34 @@
 function getValue(){
     document.getElementById("alert").classList.add("invisible");
 
-    let userString = document.getElementById("userString").value;  
+    let userString = document.getElementById("userString").value.toLowerCase();  
     let revString = checkPalindrome(userString);
     displayString(revString);
 }
 //Reverse the string
 //model
 function checkPalindrome(userString) {
-    let revString = [];
+    let revArray = [];
     let stringEven = false;
-    let reversedString = "";
     
     //reverse a string using a for loop
     for (let index = userString.length - 1; index >= 0; index--) {
-        revString += userString[index];
+        revArray += userString[index];
     }
-    if(revString.localeCompare(userString)){
+    if(revArray.localeCompare(userString)){
         stringEven = true;
-        revString = 'Text ist kein Palindrom!'
+        revArray = 'Text ist kein Palindrom!'
     } else {
         stringEven = false;
     }
-    return revString;
+    return revArray;
 }
 
 //Display the reversed string to the user
 //view
-function displayString(revString){
+function displayString(revArray){
     //write to the page
-    document.getElementById("msg").innerHTML = `Dein Text rückwärts lautet: ${revString}`; 
+    document.getElementById("msg").innerHTML = `Dein Text rückwärts lautet: ${revArray}`; 
     //turn on alert box
     document.getElementById("alert").classList.remove("invisible");
 }
